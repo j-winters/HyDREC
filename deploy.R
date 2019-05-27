@@ -1,0 +1,5 @@
+setwd("C:/Users/winters/Documents/CHIELD/CHIELD-master")
+source("processing/TreeToDatabase.R")
+file.copy("../data/db/","../app/data/",recursive = TRUE)
+file.copy("../app/Site/","C:/xampp/htdocs/CHIELD/",recursive = TRUE)
+file.copy("../app/data/","C:/xampp/htdocs/CHIELD/",recursive = TRUE)
