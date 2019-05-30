@@ -188,7 +188,7 @@ function openExplore(){
 function openSource(){
 	var documentYear = getYear();
 	var decade = (Math.floor(documentYear/10)*10)+"s";
-	var url = "https://github.com/CHIELDOnline/CHIELD/tree/master/data/tree/documents/" +
+	var url = "https://github.com/j-winters/HyDREC/tree/master/data/tree/documents/" +
 		decade + "/" + documentYear + "/" + documentKey;
 	window.open(url);
 }
@@ -210,12 +210,12 @@ function raiseIssue(){
 		body += "\n";
 	}
 	body = encodeURIComponent(body);
-	var url = "https://github.com/CHIELDOnline/CHIELD/issues/new?title="+title+"&body="+body+"&labels=data";
+	var url = "https://github.com/j-winters/HyDREC/issues/new?title="+title+"&body="+body+"&labels=data";
 	window.open(url);
 }
 
 function openDiscussionHistory(){
-	url = "https://github.com/CHIELDOnline/CHIELD/issues?q="+documentKey;
+	url = "https://github.com/j-winters/HyDREC/issues?q="+documentKey;
 	window.open(url);
 }
 

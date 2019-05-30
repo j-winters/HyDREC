@@ -63,9 +63,9 @@ table {
 
 <h1 id="toc_0">Causal link specification</h1>
 
-<p>CHIELD is a database of causal links.  Each record in the database is a particular causal link between two variables which is taken from an academic document.</p>
+<p>HyDREC is a database of causal links.  Each record in the database is a particular causal link between two variables which is taken from an academic document.</p>
 
-<p>Below is the specification of how data is stored in CHIELD.</p>
+<p>Below is the specification of how data is stored in HyDREC.</p>
 
 <ul>
 <li> Bibtex file specifying the details of the document</li>
@@ -73,13 +73,13 @@ table {
 <li> Contirbutors file specifying who contributed the data</li>
 </ul>
 
-<p>See the page on <a href="Help_AddingData.html">adding data to CHIELD</a> for information on how to create these formats.</p>
+<p>See the page on <a href="Help_AddingData.html">adding data to HyDREC</a> for information on how to create these formats.</p>
 
-<p>If you think the specification could be improved, you could <a href="https://github.com/CHIELDOnline/CHIELD/issues/new">raise an issue</a> (requires a free GitHub account).</p>
+<p>If you think the specification could be improved, you could <a href="https://github.com/HyDRECOnline/HyDREC/issues/new">raise an issue</a> (requires a free GitHub account).</p>
 
 <h1 id="toc_1">Documents</h1>
 
-<p>In CHIELD, Causal links are grouped under <strong>documents</strong>.  These will usually be published journal articles.  </p>
+<p>In HyDREC, Causal links are grouped under <strong>documents</strong>.  These will usually be published journal articles.  </p>
 
 <p>The condition for entry into the database is that the document proposed a hypothesis with causal claims that relates to some part of the evolution of communication and that it is published in a peer-reviewed publication.  This could be either biological or cultural evolution (or both) at any stage in history.</p>
 
@@ -94,7 +94,7 @@ table {
 <li> <a href="http://evolang.org/">EvoLang conferences</a></li>
 </ul>
 
-<p>Details of documents are stored in CHIELD in BibTex format.</p>
+<p>Details of documents are stored in HyDREC in BibTex format.</p>
 
 <h1 id="toc_2">Causal links</h1>
 
@@ -201,7 +201,7 @@ table {
      }
 </script>
 
-<p>There are many more examples in the main CHIELD database if you view the details of a particular document.</p>
+<p>There are many more examples in the main HyDREC database if you view the details of a particular document.</p>
 
 <h2 id="toc_4">Specification</h2>
 
@@ -273,7 +273,7 @@ table {
 
 <p>Some of the syntax is borrowed from the <a href="http://lavaan.ugent.be/">lavaan</a> R package. This package uses &quot;=~&quot; for an <em>indicator</em> relationship, but this can cause problems when typing in some spreadsheet applications, so it has been reversed to &quot;~=&quot; (the meaning is the same).</p>
 
-<p>The <em>selection pressure</em> relation &quot;^&quot; is an experimental relation type.  It is included to support evolutionary hypotheses.  Often, causal relations apply to immediate or short-term consequences for individuals.  For example, <a href="http://localhost/CHIELD/Site/document.html?key=dunbar2004gossip">Dunbar (2004)</a> reviews work showing that grooming releases endorphins.  However, sometimes these don&#39;t capture the overall message of a theory.  For example, <a href="http://localhost/CHIELD/Site/document.html?key=dunbar2004gossip">Dunbar (2004)</a> suggests that &quot;the cognitive demands of gossip are the very reason why such large brains evolved in the human lineage&quot;.  The implication is not that if an individual gossips more, then their brain gets bigger.  Rather, gossip is useful for forming alliances, which has an effect on fitness.  As a consequence, evolution selects individuals with bigger brains to support more gossip.  This seems like a different kind of causal argument than, for example, grooming releasing endorphins.  Moreover, this seems like a central point for Dunbar, but it is not captured by any of the explicitly mentioned causal links.  The &quot;^&quot; relation is intended for these situations.</p>
+<p>The <em>selection pressure</em> relation &quot;^&quot; is an experimental relation type.  It is included to support evolutionary hypotheses.  Often, causal relations apply to immediate or short-term consequences for individuals.  For example, <a href="http://localhost/HyDREC/Site/document.html?key=dunbar2004gossip">Dunbar (2004)</a> reviews work showing that grooming releases endorphins.  However, sometimes these don&#39;t capture the overall message of a theory.  For example, <a href="http://localhost/HyDREC/Site/document.html?key=dunbar2004gossip">Dunbar (2004)</a> suggests that &quot;the cognitive demands of gossip are the very reason why such large brains evolved in the human lineage&quot;.  The implication is not that if an individual gossips more, then their brain gets bigger.  Rather, gossip is useful for forming alliances, which has an effect on fitness.  As a consequence, evolution selects individuals with bigger brains to support more gossip.  This seems like a different kind of causal argument than, for example, grooming releasing endorphins.  Moreover, this seems like a central point for Dunbar, but it is not captured by any of the explicitly mentioned causal links.  The &quot;^&quot; relation is intended for these situations.</p>
 
 <h3 id="toc_8">Correlation direction (Cor)</h3>
 
@@ -380,7 +380,7 @@ table {
 </tbody>
 </table>
 
-<p>This is a non-exhaustive list, so if you think other categories should be added, you could <a href="https://github.com/CHIELDOnline/CHIELD/issues/new">raise an issue</a>.</p>
+<p>This is a non-exhaustive list, so if you think other categories should be added, you could <a href="https://github.com/HyDRECOnline/HyDREC/issues/new">raise an issue</a>.</p>
 
 <h3 id="toc_12">Confirmed</h3>
 

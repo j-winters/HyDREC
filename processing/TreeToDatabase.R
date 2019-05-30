@@ -1,4 +1,4 @@
-# Take the CHIELD database in a directory tree format and build an SQL database
+# Take the HyDREC database in a directory tree format and build an SQL database
 
 suppressWarnings(suppressMessages(library(digest)))
 suppressWarnings(suppressMessages(library(stringr)))
@@ -9,7 +9,8 @@ suppressWarnings(suppressMessages(library(bibtex)))
 suppressWarnings(suppressMessages(library(readr)))
 suppressWarnings(suppressMessages(library(crayon)))
 
-try(setwd("C:/Users/winters/Documents/CHIELD/CHIELD-master/processing/"))
+try(setwd("C:/Users/winters/Documents/HyDREC/HyDREC-master/processing/"))
+try(setwd("~/Documents/Bristol/HyDREC/HyDREC/processing/"))
 
 source("detexify.R")
 
@@ -95,8 +96,8 @@ getShortCitation = function(b){
 
 getVersion = function(){
   #gitRevision = system("git rev-parse HEAD",intern = T)
-  CHIELD.version = readLines("../version.txt")
-  return(data.frame(version=CHIELD.version,
+  HyDREC.version = readLines("../version.txt")
+  return(data.frame(version=HyDREC.version,
                     gitRevision = 'git-revision'))
 }
 
@@ -247,10 +248,12 @@ contributors = contributors[!duplicated(contributors[,c("username",'bibref')]),]
 extraContributorNamesFile = "../data/ExtraContributorNameConversions.csv"
 if(file.exists(extraContributorNamesFile)){
   extraContributorNames = read.csv(extraContributorNamesFile,stringsAsFactors = F, encoding = "UTF-8",fileEncoding = "UTF-8")
-  for(i in 1:nrow(extraContributorNames)){
-    contributors[contributors$username==
-                   extraContributorNames$username[i],]$realname =
-      extraContributorNames$realname[i]
+  if(nrow(extraContributorNames)>0){
+    for(i in 1:nrow(extraContributorNames)){
+      contributors[contributors$username==
+                     extraContributorNames$username[i],]$realname =
+        extraContributorNames$realname[i]
+    }
   }
 }
 
@@ -261,7 +264,7 @@ if(sum(is.na(contributors$username))>0){
 
 # Write big bibtex file
 bigBibtexFile = sort(bigBibtexFile)
-cat(paste(bigBibtexFile,sep="\n\n"), file="../app/Site/downloads/CHIELD.bib")
+cat(paste(bigBibtexFile,sep="\n\n"), file="../app/Site/downloads/HyDREC.bib")
 
 
 links$pk = makePks(paste0(links$bibref,"#",links$Var1,"#",links$Var2))
@@ -368,7 +371,7 @@ contributors= escapeHTML(contributors,c("username",'realname'))
 
 
 
-my_db_file <- "../data/db/CHIELD.sqlite"
+my_db_file <- "../data/db/HyDREC.sqlite"
 my_db <- src_sqlite(my_db_file, create = TRUE)
 my_db2 <- dbConnect(RSQLite::SQLite(), my_db_file)
 dbWriteTable(my_db2, "causal_links",causal_links, overwrite=T)
