@@ -1,4 +1,4 @@
-# CHIELD web application
+# HyDREC web application
 
 The folder `data` should be deployed to the private folder of your web server.
 
