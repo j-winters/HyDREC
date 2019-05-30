@@ -17,3 +17,5 @@ file.copy("../app/Site/",copyLocation,recursive = TRUE)
 file.copy("../php/",paste0(copyLocation,"Site/"),recursive = TRUE)
 file.copy("../js/",paste0(copyLocation,"Site/"),recursive = TRUE)
 file.copy("../app/data/",copyLocation,recursive = TRUE)
+
+# TODO: Zip data and copy to downloads
