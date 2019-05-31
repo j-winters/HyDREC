@@ -1,7 +1,7 @@
 
 if(file.exists("C:/Users/winters/Documents/HyDREC/HyDREC-master")){
   setwd("C:/Users/winters/Documents/HyDREC/HyDREC-master")
-  copyLocation = "C:/xampp/htdocs/CHIELD/"
+  copyLocation = "C:/xampp/htdocs/HyDREC/"
 }
 
 if(file.exists("~/Documents/Bristol/HyDREC/HyDREC/")){
